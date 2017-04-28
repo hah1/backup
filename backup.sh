@@ -9,7 +9,6 @@ ZABBIXDUMPDATABASE="MySQL数据库名"
 ZABBIXDATE=`date '+%Y-%m-%d'`
 ZABBIXLOGS="zabbixLogs.log"
 
-
 [[ -d ${ZABBIXDUMPPATH} ]] || mkdir ${ZABBIXDUMPPATH}
 cd ${ZABBIXDUMPPATH}
 [[ -e ${ZABBIXLOGS} ]] || touch ${ZABBIXLOGS}
