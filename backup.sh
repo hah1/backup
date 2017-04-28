@@ -24,8 +24,8 @@ do
 	sleep 10
 done
 
-[[ "$?" == 0 ]] && echo "#${ZABBIXDATE}:backup zabbix MySQL succeed!" >> ${ZABBIXDUMPPATH}${ZABBIXLOGS}
-[[ "$?" != 0 ]] && echo "${ZABBIXDATE}:backup zabbix MySQL fail!!!" >> ${ZABBIXDUMPPATH}${ZABBIXLOGS}
+[[ "$?" == 0 ]] && echo "#${ZABBIXDATE}:backup zabbix MySQL succeed!    `date`" >> ${ZABBIXDUMPPATH}${ZABBIXLOGS}
+[[ "$?" != 0 ]] && echo "${ZABBIXDATE}:backup zabbix MySQL fail!!!      `date`" >> ${ZABBIXDUMPPATH}${ZABBIXLOGS}
 
 cd ${ZABBIXDUMPPATH}
 rm -rf $(date '+%Y-%m-%d' --date='20 days ago')
